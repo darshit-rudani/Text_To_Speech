@@ -34,6 +34,7 @@ class _MyAppState extends State<MyApp> {
               'Text To Speech',
               style: TextStyle(
                 fontWeight: FontWeight.w900,
+                fontSize: 30.0
               ),
             ),
           ),
