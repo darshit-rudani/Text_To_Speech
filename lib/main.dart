@@ -32,10 +32,7 @@ class _MyAppState extends State<MyApp> {
           title: Center(
             child: Text(
               'Text To Speech',
-              style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 30.0
-              ),
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30.0),
             ),
           ),
         ),
@@ -47,6 +44,9 @@ class _MyAppState extends State<MyApp> {
               child: TextField(
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(10.0),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
                 ),
                 style: TextStyle(
                   fontSize: 40,
@@ -59,8 +59,15 @@ class _MyAppState extends State<MyApp> {
               height: 50.0,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 50.0, right: 50.0),
-              child: ElevatedButton(
+              padding: const EdgeInsets.only(left: 40.0, right: 40.0),
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  side: BorderSide(
+                    width: 3,
+                    color: Color(0xff6809e0),
+                  ),
+                ),
                 onPressed: () {
                   controller.speak(
                     "${textController.text}",
@@ -72,10 +79,12 @@ class _MyAppState extends State<MyApp> {
                     'Tap For Speak',
                     style: TextStyle(
                       fontSize: 40,
-                      fontWeight: FontWeight.w700,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                 ),
+                padding: EdgeInsets.all(8.0),
+                color: Color(0xff6809e0),
               ),
             )
           ],
